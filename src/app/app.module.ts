@@ -19,10 +19,6 @@ import { HomeComponent } from './component/view/home/home.component';
 import { HotelFormComponent } from './component/view/hotel/hotel-form/hotel-form.component';
 import { QuartoListComponent } from './component/view/quarto/quarto-list/quarto-list.component';
 import { QuartoFormComponent } from './component/view/quarto/quarto-form/quarto-form.component';
-import { HospedagemListComponent } from './component/view/hospedagem/hospedagem-list/hospedagem-list.component';
-import { HospedagemFormComponent } from './component/view/hospedagem/hospedagem-form/hospedagem-form.component';
-import { HospedeListComponent } from './component/view/hospede/hospede-list/hospede-list.component';
-import { HospedeFormComponent } from './component/view/hospede/hospede-form/hospede-form.component';
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -31,7 +27,15 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
-
+import { HotelUpdateComponent } from './component/view/hotel/hotel-update/hotel-update.component';
+import { ConfirmDeleteComponent } from './component/template/confirm-delete/confirm-delete.component';
+import { HospedeFormComponent } from './component/view/hospede/hospede-form/hospede-form.component';
+import { HospedeListComponent } from './component/view/hospede/hospede-list/hospede-list.component';
+import { HospedeUpdateComponent } from './component/view/hospede/hospede-update/hospede-update.component';
+import { HospedagemFormComponent } from './component/view/hospedagem/hospedagem-form/hospedagem-form.component';
+import { HospedagemListComponent } from './component/view/hospedagem/hospedagem-list/hospedagem-list.component';
+import { MatSelectModule } from '@angular/material/select';
+import { QuartoUpdateComponent } from './component/view/quarto/quarto-update/quarto-update.component';
 
 @NgModule({
   declarations: [
@@ -44,10 +48,14 @@ import {MatTableModule} from '@angular/material/table';
     HotelFormComponent,
     QuartoListComponent,
     QuartoFormComponent,
-    HospedagemListComponent,
-    HospedagemFormComponent,
+    HotelUpdateComponent,
+    ConfirmDeleteComponent,
+    HospedeFormComponent,
     HospedeListComponent,
-    HospedeFormComponent
+    HospedeUpdateComponent,
+    HospedagemFormComponent,
+    HospedagemListComponent,
+    QuartoUpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +73,8 @@ import {MatTableModule} from '@angular/material/table';
     MatFormFieldModule,
     MatInputModule,
     MatSnackBarModule,
-    MatTableModule
+    MatTableModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

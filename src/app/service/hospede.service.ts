@@ -2,14 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable } from 'rxjs';
-import { Hotel } from '../model/hotel.model';
+import { Hospede } from '../model/hospede.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class HotelService {
+export class HospedeService {
 
-  urlBase: string = "http://localhost:8080/hoteis/";
+  urlBase: string = 'http://localhost:8080/hospedes/';
   constructor(
     private http: HttpClient,
     private snackBar: MatSnackBar
@@ -27,30 +27,30 @@ export class HotelService {
   }
 
   //Create
-  create(hotel: Hotel) : Observable<Hotel>{
-    return this.http.post<Hotel>(this.urlBase, hotel)
+  create(hospede: Hospede) : Observable<Hospede>{
+    return this.http.post<Hospede>(this.urlBase, hospede);
   }
-
   //Read
     //findAll
-    findAll() : Observable<Hotel[]>{
-      return this.http.get<Hotel[]>(this.urlBase);
+    findAll() : Observable<Hospede[]>{
+      return this.http.get<Hospede[]>(this.urlBase);
     }
+
     //findById
-    findById(id: string ) : Observable<Hotel>{
+    findById(id: string ) : Observable<Hospede>{
       let url = `${this.urlBase}/${id}`;
-      return this.http.get<Hotel>(url);
+      return this.http.get<Hospede>(url);
     }
 
   //Update
-  update(hotel: Hotel) : Observable<Hotel>{
-    return this.http.put<Hotel>(this.urlBase, hotel);
+  update(hospede: Hospede) : Observable<Hospede>{
+    return this.http.put<Hospede>(this.urlBase, hospede);
   }
 
   //Delete
-  delete(hotel: Hotel): Observable<Hotel>{
-    let url = `${this.urlBase}/${hotel.idHotel}`;
+  delete(hospede: Hospede): Observable<Hospede>{
+    let url = `${this.urlBase}/${hospede.idHospede}`;
     console.log(url);
-    return this.http.delete<Hotel>(url);
+    return this.http.delete<Hospede>(url);
   }
 }

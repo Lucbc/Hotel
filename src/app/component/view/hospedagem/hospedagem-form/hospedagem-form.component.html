@@ -1,1 +1,39 @@
-<p>hospedagem-form works!</p>
+<mat-card>
+    <mat-card-title>{{titulo}}</mat-card-title>
+    <form>
+
+        <mat-form-field appearance="fill">
+            <mat-label>-- Selecione o Hospede --</mat-label>
+            <mat-select [(value)]="hospedagem.idHospede.idHospede" name="hospede" >
+              <mat-option *ngFor="let h of hospedes" [value]="h.idHospede">
+                {{h.nmHospede}}
+              </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>-- Selecione a Categoria do Quarto --</mat-label>
+            <mat-select [(value)]="hospedagem.idQuarto.categoriaQuarto" name="categoria">
+              <mat-option *ngFor="let cat of categorias  | keyvalue" [value]="cat.key">
+                {{cat.value}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+
+      
+
+
+        <mat-form-field>
+            <input matInput placeholder="Data de Checkin" name="dtCheckin" [(ngModel)]="hospedagem.dtCheckin">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput  placeholder="Data do Checkout" name="dtCheckout" [(ngModel)]="hospedagem.dtCheckout">
+        </mat-form-field>
+
+
+    </form>
+
+    <button mat-raised-button color="primary" (click)="salvar()">Salvar</button>
+    <button mat-raised-button color="warn" routerLink="/hoteis/">Cancelar</button>
+</mat-card>

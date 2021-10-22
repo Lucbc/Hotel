@@ -1,6 +1,6 @@
 export interface Hotel {
     idHotel?: number; 
-    nmNotel: string; 
+    nmHotel: string; 
     endereco: string; 
     qtdEstrelas: number;
 }
