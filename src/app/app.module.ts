@@ -36,6 +36,7 @@ import { HospedagemFormComponent } from './component/view/hospedagem/hospedagem-
 import { HospedagemListComponent } from './component/view/hospedagem/hospedagem-list/hospedagem-list.component';
 import { MatSelectModule } from '@angular/material/select';
 import { QuartoUpdateComponent } from './component/view/quarto/quarto-update/quarto-update.component';
+import { HospedagemUpdateComponent } from './component/view/hospedagem/hospedagem-update/hospedagem-update.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { QuartoUpdateComponent } from './component/view/quarto/quarto-update/qua
     HospedeUpdateComponent,
     HospedagemFormComponent,
     HospedagemListComponent,
-    QuartoUpdateComponent
+    QuartoUpdateComponent,
+    HospedagemUpdateComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './component/view/home/home.component';
 import { HospedagemFormComponent } from './component/view/hospedagem/hospedagem-form/hospedagem-form.component';
 import { HospedagemListComponent } from './component/view/hospedagem/hospedagem-list/hospedagem-list.component';
+import { HospedagemUpdateComponent } from './component/view/hospedagem/hospedagem-update/hospedagem-update.component';
 import { HospedeFormComponent } from './component/view/hospede/hospede-form/hospede-form.component';
 import { HospedeListComponent } from './component/view/hospede/hospede-list/hospede-list.component';
 import { HospedeUpdateComponent } from './component/view/hospede/hospede-update/hospede-update.component';
@@ -29,7 +30,7 @@ const routes: Routes = [
 
   {path: 'hospedagens', component: HospedagemListComponent},
   {path: 'hospedagens/form', component: HospedagemFormComponent},
-  {path: 'hospedagens/:id', component: HospedagemFormComponent}
+  {path: 'hospedagens/:id', component: HospedagemUpdateComponent}
   
 ];
 
